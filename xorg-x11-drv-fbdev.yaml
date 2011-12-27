@@ -1,6 +1,6 @@
 Name: xorg-x11-drv-fbdev
 Summary: Xorg X11 fbdev video driver
-Version: 0.4.1
+Version: 0.4.2
 Release: 1
 Group: System/X11 Hardware Support
 License: MIT
@@ -19,3 +19,9 @@ PkgConfigBR:
     - xextproto
     - inputproto
     - videoproto
+
+Description: |
+    %{summary}.
+Files:
+    - "%(pkg-config xorg-server --variable=moduledir )/drivers/fbdev_drv.so"
+    - "%{_mandir}/man4/fbdev.4*"
